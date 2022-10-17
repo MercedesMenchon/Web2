@@ -1,0 +1,20 @@
+<?php
+require_once './libs/smarty-4.2.1/libs/Smarty.class.php';
+
+class HomeView
+{
+  private $smarty;
+
+  public function __construct()
+  {
+    $this->smarty = new Smarty(); // inicializo Smarty
+
+  }
+
+  public function showHome()
+  {
+
+    //mostrar el tpl
+    $this->smarty->display('home.tpl');
+  }
+}
