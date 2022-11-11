@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-10-2022 a las 22:26:17
+-- Tiempo de generación: 11-11-2022 a las 23:42:22
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -29,23 +29,19 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `calificaciones` (
   `id` int(11) NOT NULL,
-  `NDNI` int(20) NOT NULL,
-  `Materia` varchar(20) NOT NULL,
-  `Anio_Correspondiente` varchar(20) NOT NULL,
-  `Docente` varchar(100) NOT NULL,
-  `Calificacion` int(20) NOT NULL
+  `ndni` int(20) NOT NULL,
+  `materia` varchar(20) NOT NULL,
+  `anio_correspondiente` varchar(20) NOT NULL,
+  `docente` varchar(100) NOT NULL,
+  `calificacion` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `calificaciones`
 --
 
-INSERT INTO `calificaciones` (`id`, `NDNI`, `Materia`, `Anio_Correspondiente`, `Docente`, `Calificacion`) VALUES
-(38, 35545477, 'matematica', '3', 'Marcos Tolosa', 6),
-(40, 46717779, 'matematica', '6', 'Marcos Tolosa', 7),
-(41, 35545477, 'Ingles', '2', 'Juan Henderson', 3),
+INSERT INTO `calificaciones` (`id`, `ndni`, `materia`, `anio_correspondiente`, `docente`, `calificacion`) VALUES
 (42, 47654112, 'Cs.Sociales', '6', 'Lus Lopez', 5),
-(43, 35545477, 'Historia', '3', 'Natalia Rezola', 2),
 (44, 47619438, 'Prácticas del lengua', '3', 'Karen Figueroa', 5),
 (45, 47654112, 'Ed. Física', '2', 'Santiago Luque', 10);
 
@@ -56,20 +52,28 @@ INSERT INTO `calificaciones` (`id`, `NDNI`, `Materia`, `Anio_Correspondiente`, `
 --
 
 CREATE TABLE `estudiantes` (
-  `NDNI` int(20) NOT NULL,
-  `Nombre` varchar(100) NOT NULL,
-  `Direccion` varchar(100) NOT NULL,
-  `Telefono` varchar(100) NOT NULL,
-  `Curso` int(10) NOT NULL,
-  `Division` varchar(10) NOT NULL
+  `ndni` int(20) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `direccion` varchar(100) NOT NULL,
+  `telefono` varchar(100) NOT NULL,
+  `curso` int(10) NOT NULL,
+  `division` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `estudiantes`
 --
 
-INSERT INTO `estudiantes` (`NDNI`, `Nombre`, `Direccion`, `Telefono`, `Curso`, `Division`) VALUES
-(35545477, 'Mariana Garmendia', 'Moreno 123', '1546687', 5, 'b'),
+INSERT INTO `estudiantes` (`ndni`, `nombre`, `direccion`, `telefono`, `curso`, `division`) VALUES
+(35333, 'Carlos Jimenez', 'Machado 456', '154687822', 5, 'A'),
+(3555577, 'Carlos Jimenez', 'Machado 456', '154687822', 5, 'A'),
+(3567333, 'Carlos Jimenez', 'Machado 456', '154687822', 5, 'A'),
+(3569796, 'Carlos Jimenez', 'Machado 456', '154687822', 5, 'A'),
+(35678777, 'Carlos Jimenez', 'Machado 456', '154687822', 5, 'A'),
+(35678779, 'Carlos Jimenez', 'Machado 456', '154687822', 5, 'A'),
+(35678912, 'Carlos Jimenez', 'Machado 456', '154687822', 5, 'A'),
+(35678977, 'Carlos Jimenez', 'Machado 456', '154687822', 5, 'A'),
+(35678999, 'Carlos Jimenez', 'Machado 456', '154687822', 5, 'A'),
 (44558701, 'Lourdes Di Batista', 'Marconi 1653', '154664214', 1, 'A'),
 (45678641, 'Roman Rodriguez', 'Rodriguez 234', '154672348', 5, 'B'),
 (46717779, 'Sandra Lopez', 'Rodriguez 39', '154672348', 5, 'B'),
@@ -77,7 +81,10 @@ INSERT INTO `estudiantes` (`NDNI`, `Nombre`, `Direccion`, `Telefono`, `Curso`, `
 (47654112, 'Marcos Lopez', 'Garibaldi 541', '154008123', 4, 'A'),
 (47876123, 'Mariana Fernandez', 'Montiel 719', '2345', 5, 'B'),
 (49876208, 'Camila Lezcano', 'Arana 12', '154672563', 1, 'A'),
-(49876334, 'Mariela Fontana ', '9 de Julio 563', '154776423', 2, 'A');
+(49876334, 'Mariela Fontana ', '9 de Julio 563', '154776423', 2, 'A'),
+(356787111, 'Carlos Jimenez', 'Machado 456', '154687822', 5, 'A'),
+(356787559, 'Carlos Jimenez', 'Machado 456', '154687822', 5, 'A'),
+(356788756, 'Carlos Jimenez', 'Machado 456', '154687822', 5, 'A');
 
 -- --------------------------------------------------------
 
@@ -108,13 +115,13 @@ INSERT INTO `usuarios` (`id`, `email`, `password`) VALUES
 --
 ALTER TABLE `calificaciones`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `NDNI` (`NDNI`);
+  ADD KEY `NDNI` (`ndni`);
 
 --
 -- Indices de la tabla `estudiantes`
 --
 ALTER TABLE `estudiantes`
-  ADD PRIMARY KEY (`NDNI`);
+  ADD PRIMARY KEY (`ndni`);
 
 --
 -- Indices de la tabla `usuarios`
@@ -130,7 +137,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `calificaciones`
 --
 ALTER TABLE `calificaciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
