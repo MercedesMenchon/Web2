@@ -30,11 +30,11 @@ class CalificacionesController extends controller
     $this->helperAutentificacion->checkLoggedIn();
 
 
-    $nuevondni = $_POST['NDNI'];
-    $nuevaMateria = $_POST['Materia'];
-    $nuevoAnio = $_POST['Anio_correspondiente'];
-    $nuevoDocente = $_POST['Docente'];
-    $nuevaCalificacion = $_POST['Calificacion'];
+    $nuevondni = $_POST['ndni'];
+    $nuevaMateria = $_POST['materia'];
+    $nuevoAnio = $_POST['anio_correspondiente'];
+    $nuevoDocente = $_POST['docente'];
+    $nuevaCalificacion = $_POST['calificacion'];
 
     $id = $this->modelCalificaciones->insertCalificación($nuevondni, $nuevaMateria, $nuevoAnio, $nuevoDocente, $nuevaCalificacion);
     header("Location: " . BASE_URL . "calificaciones");
@@ -52,12 +52,13 @@ class CalificacionesController extends controller
 
   function calificacionEditada($id)
   {
-
-    $nuevondni = $_POST['NDNI'];
-    $nuevaMateria = $_POST['Materia'];
-    $nuevoAnio = $_POST['Anio_correspondiente'];
-    $nuevoDocente = $_POST['Docente'];
-    $nuevaCalificacion = $_POST['Calificacion'];
+    $this->helperAutentificacion->checkLoggedIn();
+    
+    $nuevondni = $_POST['ndni'];
+    $nuevaMateria = $_POST['materia'];
+    $nuevoAnio = $_POST['anio_correspondiente'];
+    $nuevoDocente = $_POST['docente'];
+    $nuevaCalificacion = $_POST['calificacion'];
 
     $this->modelCalificaciones->editarCalificacion($id, $nuevondni, $nuevaMateria, $nuevoAnio, $nuevoDocente, $nuevaCalificacion);
     header("Location: " . BASE_URL . "calificaciones");
@@ -76,7 +77,7 @@ class CalificacionesController extends controller
   public function filtrarCalificacionByDNI()
   {
     $this->helperAutentificacion->useauth();
-    $NDNI = $_POST['NDNI'];
+    $NDNI = $_POST['ndni'];
 
     $calificacionFiltrada = $this->modelCalificaciones->getCalificacionDNIlIKE($NDNI);
     $estudiantes = $this->model->getAllEstudiantes();

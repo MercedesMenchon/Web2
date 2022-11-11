@@ -6,9 +6,9 @@
                         <div class="form-group">
                                 <div>
                                         <label>Número de DNI:</label>
-                                        <select name="NDNI">
+                                        <select name="ndni">
                                                 {foreach from =$estudiantes item = $estudiante}
-                                                        <option value="{$estudiante->NDNI}">{$estudiante->NDNI}</option>
+                                                        <option value="{$estudiante->ndni}">{$estudiante->ndni}</option>
                                                 {/foreach}
                                         </select>
                                 </div>

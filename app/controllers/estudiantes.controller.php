@@ -30,12 +30,12 @@ class EstudiantesController extends controller
     {
 
         $this->helperAutentificacion->useauth();
-        $nuevondni = $_POST['NDNI'];
-        $nuevoNombre = $_POST['Nombre'];
-        $nuevaDireccion = $_POST['Direccion'];
-        $nuevotelefono = $_POST['Telefono'];
-        $nuevoCurso = $_POST['Curso'];
-        $nuevaDivision = $_POST['Division'];
+        $nuevondni = $_POST['ndni'];
+        $nuevoNombre = $_POST['nombre'];
+        $nuevaDireccion = $_POST['direccion'];
+        $nuevotelefono = $_POST['telefono'];
+        $nuevoCurso = $_POST['curso'];
+        $nuevaDivision = $_POST['division'];
 
         if ((empty($this->model->idYaIngresado($nuevondni)))) {
 
@@ -102,7 +102,7 @@ class EstudiantesController extends controller
     function filtrarEstudiantes()
     {
         $this->helperAutentificacion->useauth();
-        $NDNI = $_POST['NDNI'];
+        $NDNI = $_POST['ndni'];
         $estudianteFiltrado = $this->model->getEstudiantelIKE($NDNI);
         if (!empty($estudianteFiltrado)) {
             $this->views->showEstudiante($estudianteFiltrado);

@@ -36,13 +36,13 @@
     {foreach from =$calificaciones item= $calificacion}
         <tr>
             <td>{$calificacion->id}</td>
-            <td>{$calificacion->NDNI}</td>
-            <td>{$calificacion->Materia}</td>
-            <td>{$calificacion->Anio_Correspondiente}</td>
-            <td>{$calificacion->Docente}</td>
-            <td>{$calificacion->Calificacion}</td>
+            <td>{$calificacion->ndni}</td>
+            <td>{$calificacion->materia}</td>
+            <td>{$calificacion->anio_correspondiente}</td>
+            <td>{$calificacion->docente}</td>
+            <td>{$calificacion->calificacion}</td>
             {if isset($smarty.session.USER_ID)}
-                <td> {if $calificacion->NDNI}
+                <td> {if $calificacion->ndni}
                         <a href='editarcalificacion/{$calificacion->id}' type="button" class="btn btn-primary">Editar</a>
                     {/if}
                     <a href='deletecalificacion/{$calificacion->id}' type="button" class="btn btn-primary">Borrar</a>

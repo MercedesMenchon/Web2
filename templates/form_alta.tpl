@@ -7,27 +7,27 @@
                         <div class="form-group">
                                 <div>
                                         <label>Número de DNI:</label>
-                                        <input type="number" name="NDNI" id="" required>
+                                        <input type="number" name="ndni" id="" required>
                                 </div>
                                 <div>
                                         <label>Nombre:</label>
-                                        <input type="text" name="Nombre" id="" required>
+                                        <input type="text" name="nombre" id="" required>
                                 </div>
                                 <div>
                                         <label>Dirección:</label>
-                                        <input type="text" name="Direccion" id="" required>
+                                        <input type="text" name="direccion" id="" required>
                                 </div>
                                 <div>
                                         <label>Telefono:</label>
-                                        <input type="number" name="Telefono" required>
+                                        <input type="number" name="telefono" required>
                                 </div>
                                 <div>
                                         <label>Curso:</label>
-                                        <input type="number" name="Curso" required>
+                                        <input type="number" name="curso" required>
                                 </div>
                                 <div>
                                         <label>División:</label>
-                                        <input type="text" name="Division" required>
+                                        <input type="text" name="division" required>
                                 </div>
 
 

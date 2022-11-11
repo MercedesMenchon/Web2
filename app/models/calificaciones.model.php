@@ -36,7 +36,7 @@ class CalificacionesModel
 
     public function insertCalificación($NDNI, $Materia, $Anio, $Docente, $Calificacion)
     {
-        $query = $this->db->prepare('INSERT INTO `calificaciones` (`id`,`NDNI`,`Materia`,`Anio_Correspondiente`,`Docente`,`Calificacion`) VALUES (?,?,?,?,?,?)');
+        $query = $this->db->prepare('INSERT INTO `calificaciones` (`id`,`ndni`,`materia`,`anio_correspondiente`,`docente`,`calificacion`) VALUES (?,?,?,?,?,?)');
         $query->execute(["", $NDNI, $Materia, $Anio, $Docente, $Calificacion]);
         //Inserto en el último lugar del arreglo
         return $this->db->lastInsertId();
@@ -51,7 +51,7 @@ class CalificacionesModel
 
     public function editarCalificacion($id, $nuevondni, $nuevaMateria, $nuevoAnio, $nuevoDocente, $nuevaCalificacion)
     {
-        $query = $this->db->prepare('UPDATE calificaciones SET  `NDNI`=?, `Materia`=? ,`Anio_Correspondiente`=? ,`Docente`=? ,`Calificacion`=?  WHERE `id`=?');
+        $query = $this->db->prepare('UPDATE calificaciones SET  `ndni`=?, `materia`=? ,`anio_correspondiente`=? ,`docente`=? ,`calificacion`=?  WHERE `id`=?');
         $query->execute([$nuevondni, $nuevaMateria, $nuevoAnio, $nuevoDocente, $nuevaCalificacion, $id]);
     }
 

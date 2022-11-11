@@ -24,21 +24,21 @@
     </tr>
 
     {foreach from =$estudiantes item= $estudiante}
-        <tr class='{if $empleado->NDNI}Editar{/if}
+        <tr class='{if $empleado->ndni}Editar{/if}
         '>
-            <td>{$estudiante->NDNI}</td>
+            <td>{$estudiante->ndni}</td>
             <!--accedemos a las propiedades del objeto con ->  -->
-            <td>{$estudiante->Nombre}</td>
-            <td>{$estudiante->Direccion}</td>
-            <td>{$estudiante->Telefono}</td>
-            <td>{$estudiante->Curso}</td>
-            <td>{$estudiante->Division}</td>
+            <td>{$estudiante->nombre}</td>
+            <td>{$estudiante->direccion}</td>
+            <td>{$estudiante->telefono}</td>
+            <td>{$estudiante->curso}</td>
+            <td>{$estudiante->division}</td>
             {if isset($smarty.session.USER_ID)}
                 <td>
-                    {if $estudiante->NDNI}
-                        <a href='editar/{$estudiante->NDNI}' type="button" class="btn btn-primary">Editar</a>
+                    {if $estudiante->ndni}
+                        <a href='editar/{$estudiante->ndni}' type="button" class="btn btn-primary">Editar</a>
                     {/if}
-                    <a href='delete/{$estudiante->NDNI}' type="button" class="btn btn-primary">Borrar</a>
+                    <a href='delete/{$estudiante->ndni}' type="button" class="btn btn-primary">Borrar</a>
                 </td>
             {/if}
         </tr>

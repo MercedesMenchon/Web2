@@ -5,7 +5,7 @@
             <div class="form-group">
                 <div>
                     <label>Número de DNI:</label>
-                    <input type="number" name="NDNI" id="" required>
+                    <input type="number" name="ndni" id="" required>
                 </div>
 
                 <button type="submit" class="btn btn-primary mt-2">Filtrar</button>

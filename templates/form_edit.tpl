@@ -8,27 +8,27 @@
                         <div class="form-group">
                                 <div>
                                         <label>Número de DNI:</label>
-                                        <input type="number" name="NDNI" id="" value="{$estudiante->NDNI}">
+                                        <input type="number" name="ndni" id="" value="{$estudiante->ndni}">
                                 </div>
                                 <div>
                                         <label>Nombre:</label>
-                                        <input type="text" name="Nombre" id="" value="{$estudiante->Nombre}">
+                                        <input type="text" name="nombre" id="" value="{$estudiante->nombre}">
                                 </div>
                                 <div>
                                         <label>Dirección:</label>
-                                        <input type="text" name="Direccion" id="" value="{$estudiante->Direccion}">
+                                        <input type="text" name="direccion" id="" value="{$estudiante->direccion}">
                                 </div>
                                 <div>
                                         <label>Telefono:</label>
-                                        <input type="number" name="Telefono" value="{$estudiante->Telefono}">
+                                        <input type="number" name="telefono" value="{$estudiante->telefono}">
                                 </div>
                                 <div>
                                         <label>Curso:</label>
-                                        <input type="number" name="Curso" value="{$estudiante->Curso}">
+                                        <input type="number" name="Curso" value="{$estudiante->curso}">
                                 </div>
                                 <div>
                                         <label>División:</label>
-                                        <input type="text" name="Division" value="{$estudiante->Division}">
+                                        <input type="text" name="Division" value="{$estudiante->division}">
                                 </div>
 
 

@@ -37,32 +37,32 @@ class EstudiantesModel {
      * Elimina una tarea dado su NDNI.
      */
     public function deleteEstudianteByNDNI($NDNI) {
-        $query = $this->db->prepare('DELETE FROM estudiantes WHERE NDNI = ?');
+        $query = $this->db->prepare('DELETE FROM estudiantes WHERE ndni = ?');
         $query->execute([$NDNI]);
     }
 
     public function idYaIngresado($NDNI){
-        $query = $this->db->prepare('SELECT NDNI FROM estudiantes WHERE NDNI LIKE ?');
+        $query = $this->db->prepare('SELECT ndni FROM estudiantes WHERE ndni LIKE ?');
         $query->execute([$NDNI]);
         return $query->fetch(PDO::FETCH_OBJ);
      }
 
 
     public function editarEstudiante($NDNIEditar,$NDNI,$Nombre,$Direccion,$Telefono,$Curso,$Division){
-    $query=$this->db->prepare('UPDATE estudiantes SET `NDNI`=?, `Nombre`=? ,`Direccion`=? ,`Telefono`=? ,`Curso`=?, `Division`=? WHERE `NDNI` = ?');
+    $query=$this->db->prepare('UPDATE estudiantes SET `ndni`=?, `nombre`=? ,`direccion`=? ,`telefono`=? ,`curso`=?, `division`=? WHERE `ndni` = ?');
     $query->execute([$NDNI,$Nombre,$Direccion,$Telefono,$Curso,$Division,$NDNIEditar]);
         
     }
 
     public function getEstudiante($NDNI){
-        $query = $this->db->prepare('SELECT * FROM estudiantes WHERE NDNI = ?');
+        $query = $this->db->prepare('SELECT * FROM estudiantes WHERE ndni = ?');
         $query->execute([$NDNI]);
         return $query->fetch(PDO::FETCH_OBJ);
     }
   
 
     public function getEstudiantelIKE($NDNI){
-        $query = $this->db->prepare('SELECT * FROM estudiantes WHERE NDNI LIKE ?');
+        $query = $this->db->prepare('SELECT * FROM estudiantes WHERE ndni LIKE ?');
         $query->execute(["%${NDNI}%"]);
 
         $estudiante = $query->fetchAll(PDO::FETCH_OBJ); 

@@ -97,10 +97,6 @@ switch ($params[0]) {
         $id = $params[1];
         $calificacionesController->deleteCalificaciones($id);
         break;
-    case 'editadocalificacion':
-        $calificacionesController = new CalificacionesController();
-        $calificacionesController->deleteCalificaciones($id);
-        break;
     case 'filtroCalificacionByEstudiante':
         $calificacionesController = new CalificacionesController();
         $calificacionesController->filtrarCalificacionByDNI();
