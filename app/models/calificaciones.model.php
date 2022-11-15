@@ -57,7 +57,7 @@ class CalificacionesModel
 
     public function getCalificacionDNIlIKE($NDNI)
     {
-        $query = $this->db->prepare('SELECT * FROM calificaciones WHERE NDNI LIKE ?');
+        $query = $this->db->prepare('SELECT * FROM calificaciones WHERE ndni LIKE ?');
         $query->execute(["%${NDNI}%"]);
 
         $calificacion = $query->fetchAll(PDO::FETCH_OBJ);

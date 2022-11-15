@@ -26,7 +26,7 @@ class EstudiantesModel {
 
    public function insertEstudiante($NDNI,$Nombre,$Direccion,$Telefono,$Curso,$Division){
        
-        $query=$this->db->prepare('INSERT INTO `estudiantes` (`NDNI`,`Nombre`,`Direccion`,`Telefono`,`Curso`, `Division`) VALUES (?,?,?,?,?,?)');
+        $query=$this->db->prepare('INSERT INTO `estudiantes` (`ndni`,`nombre`,`direccion`,`telefono`,`curso`, `division`) VALUES (?,?,?,?,?,?)');
         $query->execute([$NDNI , $Nombre, $Direccion, $Telefono ,$Curso ,$Division]);
     //Inserto en el último lugar del arreglo
         return $this->db->lastInsertId();  

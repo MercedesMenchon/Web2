@@ -72,12 +72,12 @@ class EstudiantesController extends controller
     function estudianteEditado($NDNIEditar)
     {
 
-        $nuevondni = $_POST['NDNI'];
-        $nuevoNombre = $_POST['Nombre'];
-        $nuevaDireccion = $_POST['Direccion'];
-        $nuevotelefono = $_POST['Telefono'];
-        $nuevoCurso = $_POST['Curso'];
-        $nuevaDivision = $_POST['Division'];
+        $nuevondni = $_POST['ndni'];
+        $nuevoNombre = $_POST['nombre'];
+        $nuevaDireccion = $_POST['direccion'];
+        $nuevotelefono = $_POST['telefono'];
+        $nuevoCurso = $_POST['curso'];
+        $nuevaDivision = $_POST['division'];
         if (!empty($nuevondni) && !empty($nuevoNombre) && !empty($nuevaDireccion) && !empty($nuevotelefono) && !empty($nuevaDivision) && !empty($nuevoCurso)) {
             $DNIduplicado = $this->model->idYaIngresado($nuevondni);
             if (empty($DNIduplicado) || $NDNIEditar == $nuevondni) {

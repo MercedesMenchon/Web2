@@ -14,19 +14,19 @@
                                 </div>
                                 <div>
                                         <label>Materia:</label>
-                                        <input type="text" name="Materia" id="" required>
+                                        <input type="text" name="materia" id="" required>
                                 </div>
                                 <div>
                                         <label>Año correspondiente:</label>
-                                        <input type="number" name="Anio_correspondiente" id="" required>
+                                        <input type="number" name="anio_correspondiente" id="" required>
                                 </div>
                                 <div>
                                         <label>Docente:</label>
-                                        <input type="text" name="Docente" required>
+                                        <input type="text" name="docente" required>
                                 </div>
                                 <div>
                                         <label>Calificación:</label>
-                                        <input type="number" name="Calificacion" required>
+                                        <input type="number" name="calificacion" required>
                                 </div>
 
                         </div>

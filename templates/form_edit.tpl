@@ -2,7 +2,7 @@
 
 <!-- formulario de edicion de estudiante -->
 
-<form action="editado/{$estudiante->NDNI}" method="POST" class="my-4">
+<form action="editado/{$estudiante->ndni}" method="POST" class="my-4">
         <div class="row">
                 <div class="col-9">
                         <div class="form-group">
@@ -24,11 +24,11 @@
                                 </div>
                                 <div>
                                         <label>Curso:</label>
-                                        <input type="number" name="Curso" value="{$estudiante->curso}">
+                                        <input type="number" name="curso" value="{$estudiante->curso}">
                                 </div>
                                 <div>
                                         <label>División:</label>
-                                        <input type="text" name="Division" value="{$estudiante->division}">
+                                        <input type="text" name="division" value="{$estudiante->division}">
                                 </div>
 
 

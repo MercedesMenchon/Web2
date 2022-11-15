@@ -6,28 +6,28 @@
                         <div class="form-group">
                                 <div>
                                         <label>Número de DNI:</label>
-                                        <select name="NDNI" value="{$calificacion->ndni}">
+                                        <select name="ndni" value="{$calificacion->ndni}">
                                                 {foreach from =$estudiantes item = $estudiante}
-                                                        <option value="{$estudiante->NDNI}">{$estudiante->ndni}</option>
+                                                        <option value="{$estudiante->ndni}">{$estudiante->ndni}</option>
                                                 {/foreach}
                                         </select>
                                 </div>
                                 <div>
                                         <label>Materia:</label>
-                                        <input type="text" name="Materia" id="" value="{$calificacion->materia}">
+                                        <input type="text" name="materia" id="" value="{$calificacion->materia}">
                                 </div>
                                 <div>
                                         <label>Año correspondiente:</label>
-                                        <input type="number" name="Anio_correspondiente" id=""
+                                        <input type="number" name="anio_correspondiente" id=""
                                                 value="{$calificacion->anio_correspondiente}">
                                 </div>
                                 <div>
                                         <label>Docente:</label>
-                                        <input type="text" name="Docente" value="{$calificacion->docente}">
+                                        <input type="text" name="docente" value="{$calificacion->docente}">
                                 </div>
                                 <div>
                                         <label>Calificación:</label>
-                                        <input type="number" name="Calificacion" value="{$calificacion->calificacion}">
+                                        <input type="number" name="calificacion" value="{$calificacion->calificacion}">
                                 </div>
 
                         </div>
